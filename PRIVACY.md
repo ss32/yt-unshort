@@ -21,12 +21,12 @@ The extension requests the following permissions:
 
 ## What We DON'T Do
 
-- ❌ We do NOT collect any personal information
-- ❌ We do NOT track your browsing history
-- ❌ We do NOT send data to external servers
-- ❌ We do NOT log or store URLs you visit
-- ❌ We do NOT use analytics or tracking tools
-- ❌ We do NOT display advertisements
+- We do NOT collect any personal information
+- We do NOT track your browsing history
+- We do NOT send data to external servers
+- We do NOT log or store URLs you visit
+- We do NOT use analytics or tracking tools
+- We do NOT display advertisements
 
 ## Third-Party Services
 

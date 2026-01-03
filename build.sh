@@ -45,7 +45,7 @@ for file in "${FILES[@]}"; do
         echo -e "${RED}Error: Required file missing: ${file}${NC}"
         exit 1
     fi
-    echo "  ✓ $file"
+    echo "   $file"
 done
 
 # Create the .xpi file (which is just a ZIP file with a different extension)
@@ -55,8 +55,8 @@ zip -r -FS "$OUTPUT_FILE" "${FILES[@]}" -x "*.DS_Store" "*.git*"
 # Verify the archive was created
 if [ -f "$OUTPUT_FILE" ]; then
     SIZE=$(ls -lh "$OUTPUT_FILE" | awk '{print $5}')
-    echo -e "${GREEN}✓ Build successful!${NC}"
-    echo -e "${GREEN}✓ Created: ${OUTPUT_FILE} (${SIZE})${NC}"
+    echo -e "${GREEN} Build successful!${NC}"
+    echo -e "${GREEN} Created: ${OUTPUT_FILE} (${SIZE})${NC}"
     echo ""
     echo -e "${YELLOW}To test the extension:${NC}"
     echo "  1. Open Firefox"
@@ -64,9 +64,6 @@ if [ -f "$OUTPUT_FILE" ]; then
     echo "  3. Click 'Load Temporary Add-on'"
     echo "  4. Select the .xpi file: ${OUTPUT_FILE}"
     echo ""
-    echo -e "${YELLOW}To distribute:${NC}"
-    echo "  - Upload ${OUTPUT_FILE} to GitHub releases"
-    echo "  - Or submit to https://addons.mozilla.org/"
 else
     echo -e "${RED}Error: Build failed${NC}"
     exit 1
